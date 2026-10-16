@@ -1,0 +1,19 @@
+# 前端依赖
+campus-goods-frontend/node_modules/
+campus-goods-frontend/dist/
+campus-goods-frontend/npm-debug.log
+
+# SpringBoot后端编译产物
+campus-goods-backend/target/
+campus-goods-backend/*.class
+
+# IDE配置文件
+.idea/
+.vscode/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 日志文件
+*.log

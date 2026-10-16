@@ -1,0 +1,61 @@
+/**
+ * 应用级主题变量
+ * 组件里统一使用 var(--app-*) 取色，切换浅色 / 深色主题时不需要改组件。
+ * 深色取值参考 Element Plus 的深色主题，保持整体观感一致。
+ */
+:root {
+  /* 背景 */
+  --app-bg: #f5f7fa;
+  --app-bg-elevated: #ffffff;
+  --app-bg-soft: #f5f7fa;
+  /* 边框 */
+  --app-border: #ebeef5;
+  --app-border-strong: #e4e7ed;
+  /* 文字 */
+  --app-text-primary: #303133;
+  --app-text-regular: #606266;
+  --app-text-secondary: #909399;
+  --app-text-placeholder: #c0c4cc;
+  /* 价格 / 强调 */
+  --app-price: #f56c6c;
+  /* 圆角与间距（圆角与紧凑模式由设置动态覆盖） */
+  --app-radius: 8px;
+  --app-card-padding: 20px;
+  --app-gap: 20px;
+  /* 图片占位渐变 */
+  --app-gradient-from: #f5f7fa;
+  --app-gradient-to: #e8ebf0;
+  /* 登录 / 注册页背景 */
+  --app-auth-bg: linear-gradient(135deg, #e0f0ff 0%, #f5f7fa 55%, #e8f6ef 100%);
+  --app-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+html.dark {
+  --app-bg: #141414;
+  --app-bg-elevated: #1d1e1f;
+  --app-bg-soft: #262727;
+  --app-border: #363637;
+  --app-border-strong: #414243;
+  --app-text-primary: #e5eaf3;
+  --app-text-regular: #cfd3dc;
+  --app-text-secondary: #a3a6ad;
+  --app-text-placeholder: #8d9095;
+  --app-price: #f89898;
+  --app-gradient-from: #1d1e1f;
+  --app-gradient-to: #2b2c2d;
+  --app-auth-bg: linear-gradient(135deg, #101a24 0%, #141414 55%, #101a16 100%);
+  --app-shadow: 0 10px 40px rgba(0, 0, 0, 0.55);
+}
+
+/* 紧凑模式：收紧卡片内边距与栅格间距 */
+html.compact {
+  --app-card-padding: 14px;
+  --app-gap: 12px;
+}
+
+/* 全局过渡，主题切换时不至于生硬跳变 */
+body {
+  background-color: var(--app-bg);
+  color: var(--app-text-primary);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
