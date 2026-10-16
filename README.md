@@ -23,7 +23,7 @@
 - 操作日志查看
 
 ## 开发环境
-- JDK 1.8+
+- JDK 17+
 - MySQL 8.0
 - Node.js 16+
 - Maven
